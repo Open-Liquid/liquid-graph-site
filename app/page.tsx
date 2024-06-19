@@ -8,7 +8,7 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { ResponsiveLine } from "@nivo/line"
 import { ResponsiveNetwork } from "@nivo/network"
 import { ResponsiveBoxPlot } from '@nivo/boxplot'
-import { GitGraphIcon } from "lucide-react"
+import { CopyrightIcon, GitGraphIcon } from "lucide-react"
 import network_data from "@/lib/data/network_graph_example.json"
 import box_plot_data from "@/lib/data/box_plot_example.json"
 
@@ -35,7 +35,7 @@ export default function Component() {
           </Link>
         </nav>
       </header>
-      
+
       <Sheet>
         <SheetTrigger asChild>
           <Button variant={"default"} className="w-12 h-12 fixed bottom-8 right-4 z-50 shadow-lg md:hidden">
@@ -268,7 +268,7 @@ export default function Component() {
       </main>
 
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} Liquid Graph. All rights reserved.</p>
+        <p className="text-xs text-muted-foreground"><CopyrightIcon className="h-4 w-4" /> {' '} {new Date().getFullYear()} Liquid Graph. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
             Terms of Service
