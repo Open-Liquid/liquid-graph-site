@@ -15,7 +15,7 @@ import box_plot_data from "@/lib/data/box_plot_example.json"
 export default function Component() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="hidden md:flex px-4 lg:px-6 h-14 flex items-center">
+      <header className="hidden md:flex px-4 lg:px-6 h-14 flex items-center justify-between">
         <Link href="#" className="flex items-center justify-center" prefetch={false}>
           <GitGraphIcon className="h-6 w-6" />
           <span className="sr-only">Liquid Graph</span>
