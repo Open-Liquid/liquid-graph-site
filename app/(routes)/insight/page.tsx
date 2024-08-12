@@ -9,6 +9,7 @@ import { ChartTooltipContent, ChartTooltip, ChartContainer } from "@/components/
 import { BarChartIcon, CheckIcon, LineChartIcon, PieChartIcon, XIcon } from "lucide-react";
 import GridAnimation from "@/components/ldrs/grid";
 import QuantumAnimation from "@/components/ldrs/quantum";
+import Image from "next/image";
 
 export default function InsightPage() {
   return (
@@ -20,7 +21,7 @@ export default function InsightPage() {
           <div className="container mx-auto max-w-5xl grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground">
-                Unlock the Power of Liquid's Quant Algorithms
+                Unlock the Power of Liquid&apos;s Quant Algorithms
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground">
                 Get actionable stock picks, market insights, and personalized investment strategies delivered to your
@@ -41,7 +42,7 @@ export default function InsightPage() {
         <section id="features" className="bg-muted/80 py-12 md:py-24 px-6">
           <div className="container mx-auto max-w-5xl space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">Unlock the Power of Liquid's Quant Algorithms</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">Features</h2>
               <p className="text-lg md:text-xl text-muted-foreground/80">
                 Discover the key features that set Liquid Insight apart.
               </p>
@@ -175,7 +176,7 @@ export default function InsightPage() {
         <section id="about" className="bg-muted/80 py-12 md:py-24 px-6">
           <div className="container mx-auto max-w-5xl grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <img
+              <Image
                 src="/placeholder.svg"
                 alt="About Image"
                 width="500"

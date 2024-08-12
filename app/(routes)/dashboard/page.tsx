@@ -13,6 +13,7 @@ import { Switch } from "@/components/ui/switch"
 import { CartesianGrid, XAxis, Line, LineChart, Bar, BarChart } from "recharts"
 import { ChartTooltipContent, ChartTooltip, ChartContainer } from "@/components/ui/chart"
 import { BellIcon, BookOpenIcon, CompassIcon, DownloadIcon, FileTextIcon, HomeIcon, MenuIcon, Package2Icon, PieChartIcon, PlayIcon, SettingsIcon, UserIcon, UsersIcon } from "lucide-react";
+import Image from "next/image";
 
 export default function Component() {
   return (
@@ -26,7 +27,7 @@ export default function Component() {
               prefetch={false}
             >
               <Package2Icon className="h-4 w-4 transition-all group-hover:scale-110" />
-              <span className="sr-only">Acme Inc</span>
+              <span className="sr-only">Liquid</span>
             </Link>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -157,7 +158,7 @@ export default function Component() {
                   prefetch={false}
                 >
                   <Package2Icon className="h-5 w-5 transition-all group-hover:scale-110" />
-                  <span className="sr-only">Acme Inc</span>
+                  <span className="sr-only">Liquid</span>
                 </Link>
                 <Link href="#" className="flex items-center gap-4 px-2.5 text-foreground" prefetch={false}>
                   <HomeIcon className="h-5 w-5" />
@@ -248,7 +249,7 @@ export default function Component() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="icon" className="overflow-hidden rounded-full">
-                <img
+                <Image
                   src="/placeholder.svg"
                   width={36}
                   height={36}
@@ -343,7 +344,7 @@ export default function Component() {
                 <div className="bg-muted rounded-lg p-4 flex flex-col gap-2">
                   <div className="text-lg font-bold">Q2 2023 Performance Report</div>
                   <p className="text-sm text-muted-foreground">
-                    Review your portfolio's performance, asset allocation, and market insights for the second quarter of
+                    Review your portfolio&apos;s performance, asset allocation, and market insights for the second quarter of
                     2023.
                   </p>
                   <div className="flex justify-end">
@@ -356,7 +357,7 @@ export default function Component() {
                 <div className="bg-muted rounded-lg p-4 flex flex-col gap-2">
                   <div className="text-lg font-bold">2022 Annual Report</div>
                   <p className="text-sm text-muted-foreground">
-                    Review your portfolio's performance, asset allocation, and market insights for the full year of 2022.
+                    Review your portfolio&apos;s performance, asset allocation, and market insights for the full year of 2022.
                   </p>
                   <div className="flex justify-end">
                     <Button size="sm">
