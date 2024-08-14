@@ -1,72 +1,17 @@
 "use client";
 
 import Link from "next/link"
-import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { ResponsiveLine } from "@nivo/line"
 import { ResponsiveNetwork } from "@nivo/network"
-import { ResponsiveBoxPlot } from '@nivo/boxplot'
-import { GitGraphIcon } from "lucide-react"
+import { ResponsiveBoxPlot } from "@nivo/boxplot"
 import network_data from "@/lib/data/network_graph_example.json"
 import box_plot_data from "@/lib/data/box_plot_example.json"
 
 export default function Component() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="hidden md:flex px-4 lg:px-6 h-14 flex items-center justify-between">
-        <Link href="#" className="flex items-center justify-center" prefetch={false}>
-          <GitGraphIcon className="h-6 w-6" />
-          <span className="sr-only">Liquid Graph</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link href="#strategies" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Strategies
-          </Link>
-          <Link href="#performance" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Performance
-          </Link>
-          <Link href="#whitepaper" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Whitepaper
-          </Link>
-          <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            About
-          </Link>
-        </nav>
-      </header>
-      
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button variant={"default"} className="w-12 h-12 fixed bottom-8 right-4 z-50 shadow-lg md:hidden">
-            <GitGraphIcon className="h-6 w-6" />
-            <span className="sr-only">Liquid Graph</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="right">
-          <nav className="flex flex-col gap-4 p-4">
-            {/* logo */}
-            <Link href="#" className="flex items-center justify-start mb-4" prefetch={false}>
-              <GitGraphIcon className="h-6 w-6" />
-              <span className="sr-only">Liquid Graph</span>
-            </Link>
-
-            <Link href="#strategies" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-              Strategies
-            </Link>
-            <Link href="#performance" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-              Performance
-            </Link>
-            <Link href="#whitepaper" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-              Whitepaper
-            </Link>
-            <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-              About
-            </Link>
-          </nav>
-        </SheetContent>
-      </Sheet>
-
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32" id="home">
           <div className="container px-4 md:px-6 max-w-5xl">
@@ -172,12 +117,12 @@ export default function Component() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+            <div className="mx-auto grid w-full max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <LineChart
-                props={{ className: "h-[20rem] w-full" }}
+                props={{ className: "h-[20rem] w-full overflow-x-auto" }}
               />
-              <div className="flex flex-col justify-center space-y-4">
-                <ul className="grid gap-6">
+              <div className="w-full flex flex-col justify-center space-y-4">
+                <ul className="flex flex-col gap-6">
                   <li>
                     <div className="grid gap-1">
                       <h3 className="text-xl font-bold">Annualized Returns</h3>
@@ -249,35 +194,23 @@ export default function Component() {
                   Actualizing Collective Consciousness Metrics
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Liquid Graph is redefining the future of investing by interfacing with the current state of the collective consciousness of humanity. With our unique approach to data analysis and machine learning, we are able to predict market trends and capitalize on opportunities as they are presented.
+                  Liquid Graph is redefining the future of investing by interfacing with the current state of the collective consciousness of humanity. With our unique approach to data analysis and machine learning, we are able to predict market trends and capitalize on opportunities as they are presented. Our vision is to create a more equitable and sustainable future for all, even if you can&apos;t participate in our fund. We believe that by sharing our insights and methodologies, we can empower others to make informed decisions and contribute to a more prosperous world.
                 </p>
               </div>
               <div className="mx-auto w-full max-w-sm space-y-6 pt-6">
-                <Input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="w-full"
-                />
-                <Button variant={"default"} className="w-full">
-                  Subscribe to our newsletter
-                </Button>
+                <Link
+                  href="/insight"
+                  prefetch={false}
+                >
+                  <Button variant={"default"} className="w-full">
+                    Learn More
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
         </section>
       </main>
-
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} Liquid Graph. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
-            Terms of Service
-          </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
-            Privacy Policy
-          </Link>
-        </nav>
-      </footer>
     </div>
   )
 }

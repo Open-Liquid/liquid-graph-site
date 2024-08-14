@@ -9,7 +9,7 @@ const QuantumAnimation = () => {
       <l-quantum
         size="200"
         speed="4.75"
-        color="black"
+        color="#94a3b8"
       ></l-quantum>
     </>
   )

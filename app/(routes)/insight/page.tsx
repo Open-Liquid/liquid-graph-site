@@ -188,8 +188,11 @@ export default function InsightPage() {
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold">About Liquid Insight</h2>
               <p className="text-lg md:text-xl text-muted-foreground/80">
-                Liquid Insight is a stock-advice-as-a-service platform that leverages advanced quantitative algorithms
+                Liquid Insight is a reverse hedge fund platform that leverages advanced quantitative algorithms
                 to provide personalized investment strategies, stock picks, and market analysis to our subscribers.
+                This is in contrast to traditional hedge funds, which are typically only accessible to accredited
+                investors and charge high fees. Our mission is to democratize access to sophisticated investment
+                strategies and help our customers achieve their financial goals.
               </p>
               <p className="text-lg md:text-xl text-muted-foreground/80">
                 Our team of experienced quant analysts and data scientists continuously monitor the markets, identify
