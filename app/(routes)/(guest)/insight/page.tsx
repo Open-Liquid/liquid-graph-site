@@ -19,6 +19,7 @@ import {
 import QuantumAnimation from "@/components/ldrs/quantum";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
+import InsightNewsletters from "@/components/info/insight-newsletters";
 
 export default function InsightPage() {
   const [userEmail, setUserEmail] = useState("")
@@ -98,6 +99,8 @@ export default function InsightPage() {
                 </p>
               </div>
             </div>
+
+            <InsightNewsletters />
           </div>
         </section>
 

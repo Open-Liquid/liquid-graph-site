@@ -3,11 +3,21 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 import { ResponsiveLine } from "@nivo/line"
 import { ResponsiveNetwork } from "@nivo/network"
 import { ResponsiveBoxPlot } from "@nivo/boxplot"
 import network_data from "@/lib/data/network_graph_example.json"
 import box_plot_data from "@/lib/data/box_plot_example.json"
+import { CalendarDaysIcon, SearchCodeIcon } from "lucide-react";
+import InsightNewsletters from "@/components/info/insight-newsletters";
 
 export default function Component() {
   return (
@@ -184,10 +194,63 @@ export default function Component() {
           </div>
         </section>
 
-        {/* About section - very vague and elusive */}
+        {/* About section */}
+        {/* 
+Liquid Insight’s four newsletters are a key component of the firm’s strategy to deliver actionable financial insights and analysis to subscribers. Each newsletter serves a specific purpose and targets different aspects of market analysis, providing value to individual investors, financial advisors, and small investment firms. Below is an overview of each newsletter:
+
+1. Weekly Insight
+
+	•	Issuance: Every Sunday night
+	•	Content Focus:
+	•	A general overview of market predictions for the upcoming week.
+	•	Insightful commentary on macroeconomic trends, sectoral movements, and geopolitical influences.
+	•	Data-driven graphs and charts that illustrate key points and trends.
+	•	An explanation of the reasoning behind the predictions, leveraging proprietary quant algorithms developed by Liquid Insight.
+	•	Target Audience: Investors and traders who want a comprehensive outlook on the market to guide their decisions for the week.
+
+2. Weekly Picks
+
+	•	Issuance: Every Sunday night
+	•	Content Focus:
+	•	A curated list of market-making picks for the upcoming week.
+	•	Stocks, ETFs, or other securities identified as high potential based on Liquid Insight’s quantitative analysis and algorithms.
+	•	Detailed explanations of why each pick is expected to perform well, including fundamental and technical analysis.
+	•	Risk assessments and suggested trade strategies for each pick.
+	•	Target Audience: Active traders and investors looking for specific actionable opportunities to optimize their portfolios.
+
+3. Fund Analysis
+
+	•	Issuance: Monday mornings
+	•	Content Focus:
+	•	Transparent trade plans for the Liquid Graph Fund, outlining the fund’s strategy for the week.
+	•	An in-depth analysis of the fund’s current positions, performance metrics, and any anticipated changes.
+	•	Justifications for each trade decision, backed by quantitative analysis and market research.
+	•	Updates on the fund’s allocation, risk management practices, and long-term strategy.
+	•	Target Audience: Investors interested in understanding the inner workings of the Liquid Graph Fund and gaining insight into professional fund management strategies.
+
+4. Custom Analysis
+
+	•	Issuance: Weekly and on-demand
+	•	Content Focus:
+	•	Tailored analysis generated based on the subscriber’s specific stock list or portfolio.
+	•	Custom insights derived from Liquid Insight’s algorithms applied directly to the user’s chosen assets.
+	•	Personalized recommendations and predictions, helping subscribers to make informed decisions on their unique investments.
+	•	Flexible issuance depending on the needs and requests of the subscriber.
+	•	Target Audience: High-net-worth individuals, financial advisors, and institutions who require customized analysis for their unique investment portfolios.
+
+Design and Automation
+
+	•	Styling: The newsletters are designed using TailwindCSS for a modern, clean, and professional appearance. The content is generated automatically based on data inputs, ensuring consistency and efficiency.
+	•	PDF Generation: An automated PDF generator converts the highly stylized webpages into PDFs for easy distribution and access by subscribers.
+	•	Content Sources: Data for the newsletters is drawn from Liquid Insight’s proprietary quant algorithms, market data, and external sources like Yahoo Finance and IBKR, as well as tailored subscriber inputs for the Custom Analysis.
+
+Overall Value Proposition
+
+Liquid Insight’s newsletters aim to provide deep, algorithm-driven insights in a clear and actionable format. By delivering these tailored analyses and market predictions, Liquid Insight helps its subscribers make informed decisions that can enhance their investment strategies and returns.
+        */}
         <section className="w-full py-12 md:py-24 lg:py-32" id="about">
           <div className="container px-4 md:px-6 max-w-5xl">
-            <div className="flex flex-col items-center justify-center space-y-4 text-left">
+            <div className="flex flex-col items-center justify-center space-y-20 text-left">
               <div className="space-y-2">
                 <Badge variant={"outline"} className="mb-4 md:mb-6 rounded-md shadow-lg">The Vision</Badge>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -197,16 +260,9 @@ export default function Component() {
                   Liquid Graph is redefining the future of investing by interfacing with the current state of the collective consciousness of humanity. With our unique approach to data analysis and machine learning, we are able to predict market trends and capitalize on opportunities as they are presented. Our vision is to create a more equitable and sustainable future for all, even if you can&apos;t participate in our fund. We believe that by sharing our insights and methodologies, we can empower others to make informed decisions and contribute to a more prosperous world.
                 </p>
               </div>
-              <div className="mx-auto w-full max-w-sm space-y-6 pt-6">
-                <Link
-                  href="/insight"
-                  prefetch={false}
-                >
-                  <Button variant={"default"} className="w-full">
-                    Learn More
-                  </Button>
-                </Link>
-              </div>
+
+              {/* introduce Liquid Insight as a key component of the firm’s strategy */}
+              <InsightNewsletters />
             </div>
           </div>
         </section>
