@@ -66,7 +66,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="flex flex-col items-start justify-end pt-6">
-                  <Badge variant={"outline"} className="hover:bg-black hover:text-white rounded-sm">
+                  <Badge variant={"default"} className="hover:bg-muted hover:text-black rounded-sm">
                     <Link href={newsletter.purchaseLink}>
                       Subscribe
                     </Link>
