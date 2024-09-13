@@ -41,8 +41,17 @@ export default function Component() {
                     href="#strategies"
                     prefetch={false}
                   >
-                    <Button variant={"default"} className="w-full">
+                    <Button variant={"outline"} className="w-full">
                       Learn More
+                    </Button>
+                  </Link>
+
+                  <Link
+                    href="#insight"
+                    prefetch={false}
+                  >
+                    <Button variant={"default"} className="w-full">
+                      Get Started
                     </Button>
                   </Link>
                 </div>
@@ -55,6 +64,12 @@ export default function Component() {
                 />
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-muted" id="insight">
+          <div className="container px-4 md:px-6 max-w-5xl">
+            <InsightNewsletters />
           </div>
         </section>
 
@@ -109,6 +124,23 @@ export default function Component() {
                     </div>
                   </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* About section */}
+        <section className="w-full py-12 md:py-24 lg:py-32" id="about">
+          <div className="container px-4 md:px-6 max-w-5xl">
+            <div className="flex flex-col items-center justify-center space-y-20 text-left">
+              <div className="space-y-2">
+                <Badge variant={"outline"} className="mb-4 md:mb-6 rounded-md shadow-lg">The Vision</Badge>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Actualizing Collective Consciousness Metrics
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Liquid Graph is redefining the future of investing by interfacing with the current state of the collective consciousness of humanity. With our unique approach to data analysis and machine learning, we are able to predict market trends and capitalize on opportunities as they are presented. Our vision is to create a more equitable and sustainable future for all, even if you can&apos;t participate in our fund. We believe that by sharing our insights and methodologies, we can empower others to make informed decisions and contribute to a more prosperous world.
+                </p>
               </div>
             </div>
           </div>
@@ -190,26 +222,6 @@ export default function Component() {
                   </Button>
                 </Link>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* About section */}
-        <section className="w-full py-12 md:py-24 lg:py-32" id="about">
-          <div className="container px-4 md:px-6 max-w-5xl">
-            <div className="flex flex-col items-center justify-center space-y-20 text-left">
-              <div className="space-y-2">
-                <Badge variant={"outline"} className="mb-4 md:mb-6 rounded-md shadow-lg">The Vision</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Actualizing Collective Consciousness Metrics
-                </h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Liquid Graph is redefining the future of investing by interfacing with the current state of the collective consciousness of humanity. With our unique approach to data analysis and machine learning, we are able to predict market trends and capitalize on opportunities as they are presented. Our vision is to create a more equitable and sustainable future for all, even if you can&apos;t participate in our fund. We believe that by sharing our insights and methodologies, we can empower others to make informed decisions and contribute to a more prosperous world.
-                </p>
-              </div>
-
-              {/* introduce Liquid Insight as a key component of the firm’s strategy */}
-              <InsightNewsletters />
             </div>
           </div>
         </section>

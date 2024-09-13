@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader } from '@/components/ui/card'
+import { Card, CardContent, CardDescription, CardHeader } from '@/components/ui/card'
 import { CalendarDaysIcon, SearchCodeIcon } from 'lucide-react'
 
 const InsightNewsletters = () => {
@@ -36,16 +36,6 @@ const InsightNewsletters = () => {
               A general overview of market predictions for the upcoming week.
             </CardDescription>
           </CardContent>
-          <CardFooter>
-            <Link
-              href="/insight"
-              prefetch={false}
-            >
-              <Button variant={"default"} className="w-full">
-                Learn More
-              </Button>
-            </Link>
-          </CardFooter>
         </Card>
 
         <Card>
@@ -64,16 +54,6 @@ const InsightNewsletters = () => {
               A curated list of market-making picks for the upcoming week.
             </CardDescription>
           </CardContent>
-          <CardFooter>
-            <Link
-              href="/insight"
-              prefetch={false}
-            >
-              <Button variant={"default"} className="w-full">
-                Learn More
-              </Button>
-            </Link>
-          </CardFooter>
         </Card>
 
         <Card>
@@ -92,16 +72,6 @@ const InsightNewsletters = () => {
               Transparent trade plans for the Liquid Graph Fund, outlining the fund&apos;s strategy for the week.
             </CardDescription>
           </CardContent>
-          <CardFooter>
-            <Link
-              href="/insight"
-              prefetch={false}
-            >
-              <Button variant={"default"} className="w-full">
-                Learn More
-              </Button>
-            </Link>
-          </CardFooter>
         </Card>
 
         <Card>
@@ -120,22 +90,12 @@ const InsightNewsletters = () => {
               Tailored analysis generated based on the subscriber&apos;s specific stock list or portfolio.
             </CardDescription>
           </CardContent>
-          <CardFooter>
-            <Link
-              href="/insight"
-              prefetch={false}
-            >
-              <Button variant={"default"} className="w-full">
-                Learn More
-              </Button>
-            </Link>
-          </CardFooter>
         </Card>
       </div>
 
       <div className="mx-auto w-full max-w-sm space-y-6 pt-6">
         <Link
-          href="/insight"
+          href="/insight/newsletters"
           prefetch={false}
         >
           <Button variant={"default"} className="w-full">

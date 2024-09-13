@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="hidden md:flex px-4 lg:px-6 h-14 flex items-center justify-between">
+        <header className="w-full hidden md:flex md:fixed px-4 lg:px-6 h-14 flex items-center justify-between bg-muted z-[999]">
           <Link href="/" className="flex items-center justify-center" prefetch={false}>
             <GitGraphIcon className="h-6 w-6" />
             <span className="sr-only">Liquid Graph</span>
