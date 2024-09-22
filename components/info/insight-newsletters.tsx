@@ -66,7 +66,7 @@ const InsightNewsletters = () => {
         <Badge variant="outline" className="mb-4 text-lg font-bold border-2 border-black px-4 py-2">Liquid Insight</Badge>
         <h1 className="text-4xl font-bold tracking-tight">Gain the Edge with Our Newsletters</h1>
         <p className="text-xl text-black max-w-2xl">
-          Join thousands of successful investors who rely on our expert analysis. Don't miss out on market-moving insights.
+          Join thousands of successful investors who rely on our expert analysis. Don&apos;t miss out on market-moving insights.
         </p>
       </div>
 
@@ -112,7 +112,7 @@ const InsightNewsletters = () => {
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold">Limited Time Offer!</DialogTitle>
               <DialogDescription className="text-black text-lg">
-                Subscribe now and get 20% off your first month. Don't miss this opportunity to gain a competitive edge in the market!
+                Subscribe now and get 20% off your first month. Don&apos;t miss this opportunity to gain a competitive edge in the market!
               </DialogDescription>
             </DialogHeader>
             <Button className="w-full bg-black text-white hover:bg-gray-800">Claim Your Discount</Button>
